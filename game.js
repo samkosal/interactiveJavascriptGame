@@ -29,18 +29,28 @@ function addToScore() {
 
 function renderUpgrades() {
     const container = document.getElementById('upgrades');
-    container.textContent = "";
+    container.innerHTML = "";
     
     for (let i = 0; i < upgrades.length; i++) {
         const upgrade = upgrades[i];
         const div = document.createElement('div');
         div.innerHTML = `
         <strong>${upgrade.name}</strong>
-        Cost: upgrade.cost | ${upgrade.bonus} per click;
+        Cost: ${upgrade.cost} | +${upgrade.bonus} per click;
         <button onclick="buyUpgrade(${upgrade.id})">Buy</button>;
      `;
     container.appendChild(div);
     }
 }
 
+function buyUpgrade(id) {
+    const upgrade = upgrades.find(el => el.id === id);
+    if (upgrade && score > upgrade.cost) {
+        score -= upgrade.cost;
+        pointsPerClick += upgrade.bonus;
+        updateDisplay();
+    }
+}
+
 renderUpgrades();
+
