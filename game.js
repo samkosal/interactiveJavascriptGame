@@ -1,3 +1,4 @@
+
 let score = 0;
 let pointsPerClick = 1;
 
@@ -8,9 +9,8 @@ const upgrades = [
 ]
 
 function updateDisplay() {
-
     document.getElementById("score-display").textContent = 'Score: ' + score;
-    document.getElementById("rate-display").textContent = 'Points per click:' + pointsPerClick;
+    document.getElementById("rate-display").textContent =  'Points per click: ' + pointsPerClick;
 }
 
 document.getElementById('click-btn').addEventListener('click', addToScore);
@@ -19,3 +19,28 @@ function addToScore() {
     score += pointsPerClick;
     updateDisplay();
 }
+
+document.getElementById('click-btn').addEventListener('click', addToScore);
+
+function addToScore() {
+    score += pointsPerClick;
+    updateDisplay();
+}
+
+function renderUpgrades() {
+    const container = document.getElementById('upgrades');
+    container.textContent = "";
+    
+    for (let i = 0; i < upgrades.length; i++) {
+        const upgrade = upgrades[i];
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <strong>${upgrade.name}</strong>
+        Cost: upgrade.cost | ${upgrade.bonus} per click;
+        <button onclick="buyUpgrade(${upgrade.id})">Buy</button>;
+     `;
+    container.appendChild(div);
+    }
+}
+
+renderUpgrades();
