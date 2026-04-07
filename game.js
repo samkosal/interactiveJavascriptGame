@@ -1,14 +1,16 @@
-score = 0;
-pointsPerClick = 1;
+
+let score = 0;
+let pointsPerClick = 1;
 
 function updateDisplay() {
-    document.getElementById("score-display").textContent =`Score: ${score}`;
-    document.getElementById("rate-display") `Points per click: ${pointsPerClick}`;
-    document.getElementById('click-btn').addEventListener(onclick, addToScore());
+    document.getElementById("score-display").textContent = 'Score: ' + score;
+    document.getElementById("rate-display").textContent =  'Points per click: ' + pointsPerClick;
+}
 
-    function addToScore() {
-        score += pointsPerClick;
-        updateDisplay();
-    }
+document.getElementById('click-btn').addEventListener('click', addToScore);
+
+function addToScore() {
+    score += pointsPerClick;
+    updateDisplay();
 }
 
