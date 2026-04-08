@@ -48,3 +48,72 @@ button:disabled {
     margin: 5px 0;
     border-radius: 4px;
 }
+
+body {
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Theme: Ocean (default) */
+.theme-ocean {
+    background: linear-gradient(to bottom, #0a1628, #1a3a5c, #2980b9);
+    color: #cce0f5;
+}
+.theme-ocean h1 { color: #5dade2; }
+.theme-ocean h2 { color: #3498db; }
+.theme-ocean p { color: #85c1e9; }
+.theme-ocean button:hover { background-color: #1f618d; }
+.theme-ocean button:disabled { background-color: #1b4f72; color: #7fb3d3; }
+.theme-ocean #upgrades div { background-color: #154360; }
+.theme-ocean #orca-facts div { background-color: #1a5276; }
+
+/* Theme: Sunset */
+.theme-sunset {
+    background: linear-gradient(to bottom, #1a0a00, #5c1a00, #b94a29);
+    color: #f5e0cc;
+}
+.theme-sunset h1 { color: #e2845d; }
+.theme-sunset h2 { color: #db6734; }
+.theme-sunset p { color: #e9b885; }
+.theme-sunset button:hover { background-color: #8d3f1f; }
+.theme-sunset button:disabled { background-color: #72391b; color: #d3937f; }
+.theme-sunset #upgrades div { background-color: #602b15; }
+.theme-sunset #orca-facts div { background-color: #76351a; }
+
+/* Theme: Forest */
+.theme-forest {
+    background: linear-gradient(to bottom, #0a1a0a, #1a5c2a, #29b95a);
+    color: #ccf5d5;
+}
+.theme-forest h1 { color: #5de27a; }
+.theme-forest h2 { color: #34db5a; }
+.theme-forest p { color: #85e9a0; }
+.theme-forest button:hover { background-color: #1f8d3f; }
+.theme-forest button:disabled { background-color: #1b7235; color: #7fd3a0; }
+.theme-forest #upgrades div { background-color: #15602b; }
+.theme-forest #orca-facts div { background-color: #1a7635; }
+
+/* Theme: Purple */
+.theme-purple {
+    background: linear-gradient(to bottom, #140a28, #3a1a5c, #8029b9);
+    color: #e0ccf5;
+}
+.theme-purple h1 { color: #ad5de2; }
+.theme-purple h2 { color: #9834db; }
+.theme-purple p { color: #c185e9; }
+.theme-purple button:hover { background-color: #5f1f8d; }
+.theme-purple button:disabled { background-color: #4f1b72; color: #b37fd3; }
+.theme-purple #upgrades div { background-color: #431560; }
+.theme-purple #orca-facts div { background-color: #521a76; }
+
+/* Theme: Dark */
+.theme-dark {
+    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a, #333333);
+    color: #d5d5d5;
+}
+.theme-dark h1 { color: #e2e2e2; }
+.theme-dark h2 { color: #cccccc; }
+.theme-dark p { color: #b0b0b0; }
+.theme-dark button:hover { background-color: #555555; }
+.theme-dark button:disabled { background-color: #3a3a3a; color: #888888; }
+.theme-dark #upgrades div { background-color: #2a2a2a; }
+.theme-dark #orca-facts div { background-color: #303030; }

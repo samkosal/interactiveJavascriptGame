@@ -3,6 +3,8 @@ let score = 0;
 let pointsPerClick = 1;
 let clickCount = 0;
 let orcaIndex = 0;
+let themeIndex = 0;
+const themes = ['theme-ocean', 'theme-sunset', 'theme-forest', 'theme-purple', 'theme-dark'];
 
 const upgrades = [
     {id: 1, name: "sam", cost: 100, bonus: 120},
@@ -79,10 +81,19 @@ document.getElementById('click-btn').addEventListener('click', addToScore);
 function addToScore() {
     score += pointsPerClick;
     clickCount++;
+    if (clickCount % 3 === 0) {
+        changeTheme();
+    }
     updateDisplay();
     renderUpgrades();
     displayOrcaFacts();
     winScreen();
+}
+
+function changeTheme() {
+    document.body.classList.remove(themes[themeIndex]);
+    themeIndex = (themeIndex + 1) % themes.length;
+    document.body.classList.add(themes[themeIndex]);
 }
 
 function winScreen() {
@@ -140,4 +151,5 @@ function displayOrcaFacts() {
 }
 
 renderUpgrades();
+document.body.classList.add(themes[themeIndex]);
 
