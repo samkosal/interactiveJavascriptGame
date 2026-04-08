@@ -5,7 +5,7 @@ let clickCount = 0;
 let orcaIndex = 0;
 
 const upgrades = [
-    {id: 1, name: "sam", cost: 10, bonus: 10},
+    {id: 1, name: "sam", cost: 100, bonus: 120},
     {id: 2, name: "konrad", cost: 30, bonus: 50},
     {id: 3, name: "jonus", cost: 1, bonus: 2}
 ]
@@ -82,6 +82,15 @@ function addToScore() {
     updateDisplay();
     renderUpgrades();
     displayOrcaFacts();
+    winScreen();
+}
+
+function winScreen() {
+  if (score >= 100000) {
+    let WinH1 = document.getElementById("winScreen");
+    WinH1.textContent = 'YOU WIN';
+    WinH1.style.color = "green";
+  }
 }
 
 function renderUpgrades() {
