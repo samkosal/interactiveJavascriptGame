@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(to bottom, #0a1628, #1a3a5c, #2980b9);
+    color: #cce0f5;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #5dade2;
+}
+
+h2 {
+    color: #3498db;
+}
+
+p {
+    color: #85c1e9;
+}
+
+button:hover {
+    background-color: #1f618d;
+}
+
+button:disabled {
+    background-color: #1b4f72;
+    color: #7fb3d3;
+    cursor: not-allowed;
+}
+
+#upgrades, #orca-facts {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#upgrades div {
+    background-color: #154360;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#orca-facts div {
+    background-color: #1a5276;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
